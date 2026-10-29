@@ -1,0 +1,13 @@
+variable,iv,strength,type,business_reason
+pay_1,0.8939541042860562,suspicious,delinquency,Last month's repayment status is the most direct sign of current financial stress.
+max_delinquency_6m,0.7917721098653463,suspicious,delinquency,The worst arrears in six months captures past trouble even if the customer has since caught up.
+pay_2,0.5571437262529029,suspicious,delinquency,August repayment status shows whether arrears are recent or persistent.
+pay_3,0.4198346981320294,strong,delinquency,July repayment status adds history of missed payments beyond the last two months.
+pay_4,0.3679893309533095,strong,delinquency,June repayment status adds older payment history.
+pay_5,0.3427647017149187,strong,delinquency,May repayment status adds older payment history.
+pay_6,0.2959107360938769,medium,delinquency,April repayment status adds the oldest payment history in the window.
+months_zero_payment_6m,0.2634744898485168,medium,payment,"Customers who repeatedly pay nothing are not servicing their debt, whatever their balance."
+pay_ratio_1,0.2436722279470801,medium,payment,Paying little of last month's bill signals difficulty keeping up with the balance.
+limit_bal,0.1983080304500429,medium,limit,The credit limit reflects the bank's earlier assessment of the customer's income and creditworthiness.
+pay_amt1,0.1762017731957983,medium,payment,The amount paid last month shows the customer's current capacity to pay.
+pay_amt2,0.1611713424348693,medium,payment,The amount paid in August adds a second month of payment capacity.

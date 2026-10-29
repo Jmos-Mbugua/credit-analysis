@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+
+# Data is downloaded by scripts/download_data.py, never committed
+data/raw/
+data/processed/
+
+# Pickled fits are recreated by notebooks 02 and 04. The app's frozen scorecard
+# (models/*.json, models/*.csv) is committed.
+models/*.pkl
+
+# Local instructions for Claude Code, kept out of the repository
+CLAUDE.md
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python clutter
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/

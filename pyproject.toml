@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credit-risk-scorecard"
+version = "0.1.0"
+description = "A behavioural credit scorecard built the way banks build them."
+readme = "README.md"
+requires-python = ">=3.10"
+# Exact versions are pinned in requirements.txt (app) and requirements-dev.txt (everything).
+# The core package (scoring) needs only pandas and numpy; modelling extras are optional.
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+app = ["streamlit>=1.41"]
+modelling = [
+    "scikit-learn>=1.5",
+    "scipy>=1.11,<1.16",  # statsmodels 0.14.4 breaks on newer SciPy
+    "statsmodels>=0.14",
+    "matplotlib>=3.9",
+    "ucimlrepo>=0.0.7",
+    "xlrd>=2.0.1",
+]
+dev = ["pytest>=8", "jupyter>=1.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
